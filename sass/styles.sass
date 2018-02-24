@@ -1,0 +1,292 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+
+html, body
+	height: 100%
+
+body
+	max-width: 1920px
+	min-width: 320px
+	margin: 0 auto
+	position: relative
+	font: 16px/1 $default-font-family
+	overflow-x: hidden
+
+.nowrap
+	white-space: nowrap
+
+
+.page-content
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: center
+	position: relative
+	max-width: 1920px
+	margin: 0 auto
+	min-height: 100vh
+	height: 1px
+	background-repeat: no-repeat
+	background-size: cover
+	overflow-x: hidden
+	overflow-y: auto
+
+.top-line
+	width: 100%
+	max-width: 750px
+	padding: 0 25px
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+
+.game-list
+	display: flex
+	padding: 0
+	margin: 0
+	list-style-type: none
+
+.game
+	width: 115px
+	max-height: 35px
+	margin-right: 15px
+	border-top-left-radius: 15px
+	border-top-right-radius: 15px
+	overflow: hidden
+	cursor: pointer
+
+	&:hover
+		box-shadow: 0 0 20px 5px rgba(47,47,47,.6)
+
+	&.current
+		box-shadow: 0 0 20px 5px rgba(47,47,47,.6)
+
+	&-dayz
+		padding: 8px 20px
+		background-color: #2f2f2f
+	&-hurtworld
+		padding: 8px 12px
+		background-color: #ea9129
+
+.game-img
+	display: block
+	max-width: 100%
+	max-height: 25px
+	height: auto
+	margin: 0 auto
+
+
+.logo-wrap
+	position: relative
+	z-index: 1
+	max-height: 35px
+	padding: 0 10px
+	background-color: #2f2f2f
+	border-top-left-radius: 15px
+	border-top-right-radius: 15px
+.logo
+	display: block
+	max-width: 100%
+	max-height: 35px
+	height: auto
+
+
+
+
+
+
+.servers
+	width: 738px
+	padding: 30px 30px 100px
+	background-image: linear-gradient(to bottom, #2f2f2f, rgba(47,47,47,.3))
+	border-radius: 10px
+
+	&-tab:not(:first-child)
+		display: none
+
+	&-link
+		display: block
+		padding: 10px 0
+		font-size: 28px
+		color: #000
+		text-align: center
+		text-decoration: none
+		background-image: linear-gradient(to top, #404040, #656565)
+		border-radius: 10px 
+		transition: all .2s
+		box-shadow: 0 0 10px rgba(0,0,0,.4)
+		&:hover
+			background-image: linear-gradient(to bottom, #404040, #656565)
+		&:active
+			transform: translate(1px, 1px)
+
+
+.server
+	width: 100%
+	margin-top: 25px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: flex-end
+	text-transform: uppercase
+	&-banner
+		padding: 0 15px 10px
+		flex: 0 0 67%
+		max-width: 67%
+		display: flex
+		align-items: flex-end
+		min-height: 160px
+		height: 1px
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 15px
+		box-shadow: 0 0 10px rgba(0,0,0,.4)
+
+	&-text
+		width: 100%
+		font-size: 38px
+		text-align: center
+		color: #fff
+	&-info
+		padding: 0 15px
+		flex: 0 0 33%
+		max-width: 33%
+	&-quantity
+		display: flex
+		font-size: 52px
+		color: #fff
+		justify-content: center
+
+.players-online
+	&-close
+		color: #a92226
+	&-open
+		color: #009a45
+.number-separator
+	margin: 0 2px
+
+.player-action-link
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 10px 0
+	min-height: 84px
+	font-size: 28px
+	color: #fff
+	text-align: center
+	text-decoration: none
+	border-radius: 8px 
+	transition: all .2s
+	box-shadow: 0 0 10px rgba(0,0,0,.4)
+	&:active
+		transform: translate(1px, 1px)
+	&-close
+		background-image: linear-gradient(to top, #482829, #af2429)
+		&:hover
+			background-image: linear-gradient(to bottom, #482829, #af2429)
+	&-open
+		background-image: linear-gradient(to top, #18482e, #009a45)
+		&:hover
+			background-image: linear-gradient(to bottom, #18482e, #009a45)
+
+
+.server
+	&-separator
+		margin: 25px 0
+		height: 8px
+		border-radius: 12px
+		background: linear-gradient(to top, #41403e, #555452)
+
+	
+	&-warning-wrap
+		margin-top: 25px
+		padding: 0 75px 0 25px
+		flex: 0 0 100%
+		max-width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 100%
+
+	&-warning
+		color: #6f6f6f
+		flex: 0 0 55%
+		max-width: 55%
+		font-size: 16px
+
+
+		&-separator
+			flex: 0 0 9%
+			max-width: 2px
+			min-height: 60px
+			background: linear-gradient(to right, #757575 50%, #474747 50%)
+
+	&-admin
+		flex: 0 0 37%
+		max-width: 37%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-size: 20px
+		text-align: right
+		color: #fff
+		cursor: pointer
+		a,span
+			color: inherit
+			text-decoration: none
+		&-icon
+			flex: 0 0 32px
+			width: 32px
+			height: 32px
+			margin-left: 5px
+
+.forUser
+	position: absolute
+	width: 100%
+	max-width: 1000px
+	margin: 0 auto
+	left: 0
+	right: 0
+	bottom: 20px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&-link
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		margin: 0 5px
+		padding: 5px 0
+		text-align: center
+		color: #fff
+		font-size: 24px
+		text-decoration: none
+		border-radius: 5px
+		background-image: linear-gradient(to top, #482829, #af2429)
+		box-shadow: 0 0 10px rgba(0,0,0,.4)
+		&:hover
+			background-image: linear-gradient(to bottom, #482829, #af2429)
+		&:active
+			transform: translate(1px, 1px)
+
+	&-link-icon
+		width: 28px
+		height: 28px
+		margin-right: 5px
+
+
+@media only screen and (min-width : 1400px)
+	.servers
+		min-height: 44vw
+	/**/
